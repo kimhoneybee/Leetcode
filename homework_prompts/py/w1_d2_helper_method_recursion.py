@@ -80,9 +80,27 @@ def list_pairs(lst):
 #
 # Example: flatten([1, [2, 3, [4]], 5, [[6]]]) => [1, 2, 3, 4, 5, 6]
 #
-def flatten(lst):
+def flatten(arr):
     # YOUR WORK HERE
-    pass
+    result = []
+    def recurse(lst):
+        for i in range(len(lst)):
+            if i.instance(lst[i], int):
+                result.append(lst[i])
+            else:
+                #lst[i] is a LIST
+                recurse(lst[i])
+    recurse(arr)
+    return result
+
+def print_list(lst):
+    def pinting_helper(i):
+        if i !=len(lst):
+            print(lst[i])
+            printing_helper(i+1)
+    printing_helper(0)
+    
+print_list([1,2,3])
 
 
 #
