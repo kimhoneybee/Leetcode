@@ -1,0 +1,61 @@
+#define lettice path
+
+def latticePaths(m, n):
+    # Write your code here
+
+    #  Method -> Return -> Base -> Recursive
+    count = 0
+
+    def helper(i, j):
+        nonlocal count
+        if i > m or j > n:
+            return
+        elif i == m and j == n:
+            count += 1
+            return
+        else:
+            helper(i+1, j)
+            helper(i, j+1)
+
+    helper(0, 0)
+    return count
+
+
+print(latticePaths(2, 3))
+
+
+
+########################### Hexdecimal
+
+def Hexdecimal(number):
+  numbering = '0123456789abcdef'
+  if number < 16:
+    return numbering[number]
+  else:
+    x= int(number/16)
+    y= numbering[number%16]
+  return  Hexdecimal(x) +y
+
+print(Hexdecimal(1130))
+
+
+#############################
+rint("Hello")
+
+def coinSum(coins, total):
+    # Write your code here
+    total = 4
+    count = 0
+    result = 
+    def add(count):
+        if n == 0:
+          count+=1
+        if n >0 and n <=4:
+          total=total-coins[i]
+        if n<0
+    return add(count)
+         
+        5
+   4    3    2
+ 321  210  10
+210   10   0 
