@@ -25,7 +25,14 @@
 
 def unique(arr):
     # YOUR WORK HERE
-    pass
+    freq ={}
+    list=[]
+    for n in arr:
+      freq[n] = freq.get(n,1)
+    list = [n for n in freq] 
+    return list
+
+print(unique([1,2,3,5,4,7,8]))
 
 # 2. Word Count
 
